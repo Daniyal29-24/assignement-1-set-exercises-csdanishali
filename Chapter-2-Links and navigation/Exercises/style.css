@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    color: #e0e0e0; /* Light text color */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    background-color: #0d0d0d; /* Dark background */
+}
+.nav ul {
+    margin: 20px;
+}
+.nav li {
+    display: inline;
+}
+.nav a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em;
+    color: #00ffcc; /* Neon teal */
+}
+.nav a:hover {
+    background-color: #00ffcc;
+    color: #0d0d0d; /* Dark background on hover */
+}
+.main-nav {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: lighter;
+    border-bottom: 1px solid #00ffcc; /* Neon teal */
+}
+.main-nav {
+    padding: 2% 0.10%;
+}
+.name {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    color: #ff0066; /* Neon pink */
+}
+.name-large {
+    font-size: 5em;
+    color: #ff0066; /* Neon pink */
+}
+.content-section {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+.sub-heading {
+    color: #00ffcc; /* Neon teal */
+}
+.heading {
+    color: #00ffcc; /* Neon teal */
+    text-align: center;
+}
+.button {
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color: #ff0066; /* Neon pink */
+    color: #e0e0e0; /* Light text */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: #e0e0e0; /* Light background */
+    color: #ff0066; /* Neon pink text */
+}
+.section-header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #00ffcc; /* Neon teal */
+}
+.main-footer {
+    background-color: #1a1a1a; /* Dark footer background */
+    padding: 0 0%;
+}
+.main-footer-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-grow: 1em;
+}
+.footer-nav img {
+    width: 80px;
+    height: 80px;
+}
+.span {
+    color: #ff0066; /* Neon pink */
+    text-align: center;
+}
