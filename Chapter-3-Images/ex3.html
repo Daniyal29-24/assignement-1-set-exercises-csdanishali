@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Photography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('motorcycle-background.jpg'); /* Replace with a motorcycle-themed background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #a9a9a9; /* Metallic grey text color */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #c0c0c0; /* Metallic grey color for the heading */
+            margin-top: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            filter: grayscale(50%) brightness(90%) contrast(120%);
+            border: 5px solid #c0c0c0; /* Metallic grey border */
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+            filter: grayscale(30%) brightness(100%) contrast(130%);
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .license {
+            font-size: 0.9em;
+            color: #d3d3d3; /* Light metallic grey for license text */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #c0c0c0; /* Metallic grey color for footer text */
+            font-size: 1em;
+            border-top: 2px solid #a9a9a9;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>Motorcycle Photography</h1>
+    <div class="image-container">
+        <img src="HOLA.jpg" 
+             alt="A classic motorcycle parked on a scenic road" 
+             title="Classic Motorcycle" 
+             width="300" 
+             height="200">
+        <p class="license">Image by Placeholder.com, licensed under CC0 (Public Domain).</p>
+    </div>
+    <div class="image-container">
+        <img src="ami.jpg" 
+             alt="A sport motorcycle speeding on a track" 
+             title="Sport Motorcycle" 
+             width="300" 
+             height="200">
+        <p class="license">Image by Placeholder.com, licensed under CC0 (Public Domain).</p>
+    </div>
+    <div class="image-container">
+        <img src="gos.jpg" 
+             alt="An adventure motorcycle on a rugged trail" 
+             title="Adventure Motorcycle" 
+             width="300" 
+             height="200">
+        <p class="license">Image by Placeholder.com, licensed under CC0 (Public Domain).</p>
+    </div>
+    <footer>
+        © 2023 Motorcycle Photography. All rights reserved.
+    </footer>
+</body>
+</html>
