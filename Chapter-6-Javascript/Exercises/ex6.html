@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #b5c99a, #d9e4c5);
+            color: #444;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling for the calculator container */
+        .calculator {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for the calculator container */
+        .calculator:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling for the heading */
+        h1 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #556b2f;
+        }
+
+        /* Styling for input fields */
+        input[type="number"] {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Focus effect for input fields */
+        input[type="number"]:focus {
+            border-color: #556b2f;
+            outline: none;
+            box-shadow: 0 0 10px rgba(85, 107, 47, 0.5);
+        }
+
+        /* Styling for the button */
+        button {
+            background-color: #556b2f;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Hover effect for the button */
+        button:hover {
+            background-color: #6b8e23;
+            transform: scale(1.1);
+        }
+
+        /* Styling for the result paragraph */
+        #totalCost {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #556b2f;
+            background: #f5f5f0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add subtle animation to the result */
+        #totalCost.animate {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Calculator container -->
+    <div class="calculator">
+        <h1>Petrol Calculator</h1>
+        <!-- Input for petrol cost per liter -->
+        <label for="costPerLiter">Cost per Liter:</label>
+        <input type="number" id="costPerLiter" value="1.72" step="0.01">
+
+        <!-- Input for number of liters purchased -->
+        <label for="litersPurchased">Liters Purchased:</label>
+        <input type="number" id="litersPurchased" value="0" step="0.01">
+
+        <!-- Button to calculate total cost -->
+        <button onclick="calculateTotal()">Calculate Total</button>
+
+        <!-- Paragraph to display the total cost -->
+        <p id="totalCost">Total Cost: $0.00</p>
+    </div>
+
+    <script>
+        // Function to calculate the total cost of petrol
+        function calculateTotal() {
+            // Get the values from the input fields
+            const costPerLiter = parseFloat(document.getElementById('costPerLiter').value);
+            const litersPurchased = parseFloat(document.getElementById('litersPurchased').value);
+
+            // Calculate the total cost
+            const totalCost = costPerLiter * litersPurchased;
+
+            // Display the total cost in the paragraph
+            const totalCostElement = document.getElementById('totalCost');
+            totalCostElement.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+
+            // Add animation class to the result
+            totalCostElement.classList.remove('animate');
+            void totalCostElement.offsetWidth; // Trigger reflow to restart animation
+            totalCostElement.classList.add('animate');
+        }
+    </script>
+</body>
+</html>
